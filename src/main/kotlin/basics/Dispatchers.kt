@@ -2,6 +2,7 @@ package basics
 
 import kotlinx.coroutines.*
 
+@OptIn(DelicateCoroutinesApi::class)
 fun main() {
     // Decides which thread or thread pool job runs on
 
