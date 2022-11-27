@@ -17,7 +17,7 @@ fun main() {
     // try-catch in the coroutine of await() call
 
     runBlocking {
-        val handler = CoroutineExceptionHandler { context, throwable ->
+        val handler = CoroutineExceptionHandler { _, throwable ->
             println("Exception handled:: ${throwable.localizedMessage}")
         }
         val job = GlobalScope.launch(handler) {
